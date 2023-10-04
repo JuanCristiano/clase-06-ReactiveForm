@@ -1,0 +1,39 @@
+<form [formGroup]="formulario" class="container">
+    <div class="form-container">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" formControlName="nombre">
+      <div *ngIf="formulario.get('nombre')?.hasError('required')">
+        El nombre es requerido.
+      </div>
+    </div>
+  
+    <div class="form-container">
+      <label for="apellido">Apellido:</label>
+      <input type="text" id="apellido" formControlName="apellido">
+      <div *ngIf="formulario.get('apellido')?.hasError('required')">
+        El apellido es requerido.
+      </div>
+    </div>
+  
+    <div class="form-container">
+      <label for="documento">Documento:</label>
+      <input type="text" id="documento" formControlName="documento">
+      <div *ngIf="formulario.get('documento')?.hasError('required')">
+        El documento es requerido.
+      </div>
+      <div *ngIf="formulario.get('documento')?.hasError('pattern')">
+        El documento debe tener 8 dígitos.
+      </div>
+    </div>
+  
+    <div class="form-container">
+      <label for="carrera">Carrera:</label>
+      <input type="text" id="carrera" formControlName="carrera">
+      <div *ngIf="formulario.get('carrera')?.hasError('required')">
+        La carrera es requerida.
+      </div>
+    </div>
+  
+    <button type="submit">Enviar</button>
+  </form>
+  

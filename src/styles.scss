@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  
+    background-color: #5A1912; 
+  }
+  
+  .form-container {
+    background-color: white;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
